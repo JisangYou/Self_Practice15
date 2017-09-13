@@ -1,0 +1,27 @@
+
+public class MethodVarargs {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		MethodVarargs varargs = new MethodVarargs();
+		varargs.calculateNumbersWithArray(new int[] { 1, 2, 3, 4, 5 });
+		varargs.calculateNumbers(1, 2, 3, 4, 5);
+
+		MemberDTO dto = new MemberDTO("Sangmin", "010XXXXYYYY", "javayuning@gmail.com");
+		System.out.println(dto);
+	}
+
+	public void calculateNumbersWithArray(int[] numbers) {
+
+	}
+
+	public void calculateNumbers(int... numbers) {
+		int total = 0;
+		for (int number : numbers) {
+			total += number;
+		}
+		System.out.println("Total=" + total);
+
+	}
+
+}
